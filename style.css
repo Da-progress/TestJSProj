@@ -1,0 +1,116 @@
+* {
+    font-family: tahoma;
+}
+body {
+    margin: 0px auto;
+    width: 940px;
+    height: 100%;
+}
+@media screen and (max-width: 940px) {
+    body {
+        width: 100%;
+    }
+}
+header {
+    font-size: 24px;
+    padding: 15px 0;
+    background: #0072C6;
+    color: #FAFAFA;
+    text-align: center;
+}
+.main_wrapper {
+    background: #FAFAFA;
+}
+.input_output .wrapper {
+    width: 50%;
+    float: left;
+}
+.input_output .wrapper label,
+.input_output .wrapper textarea {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+}
+.input_output .wrapper textarea {
+    height: 100px;
+}
+.clearfix:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+#iqplot {
+    height: 470px;
+}
+label {
+    border: 1px solid #0072c6;
+    padding: 6px 12px;
+    display: inline-block;
+    margin: 4px;
+    float: left;
+    font-size: 16px;
+    cursor: pointer;
+}
+input[type=checkbox] {
+    display: none;
+}
+input[type="checkbox"]:checked+label {
+    background: #0072c6;
+    color: #FAFAFA;
+}
+.btn {
+    border: none;
+    padding: 6px 12px;
+    display: inline-block;
+    margin: 4px;
+    float: left;
+    font-size: 16px;
+    cursor: pointer;
+    background: none;
+    border: 1px solid #0072c6;
+}
+label:hover,
+.btn:hover {
+    background: #0072c6;
+    color: #FAFAFA;
+}
+.input_output label {
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    background: #0072c6;
+    color: #FAFAFA;
+    padding: 5px 10px;
+}
+input[type=text] {
+    border: 1px solid #0072c6;
+    padding: 6px 12px;
+    display: inline-block;
+    margin: 4px;
+    float: left;
+    font-size: 16px;
+    cursor: pointer;
+}
+footer {
+    text-align: right;
+    padding: 5px 10px;
+    background: #333;
+    color: #FAFAFA;
+}
+.title {
+    padding: 6px 12px;
+    display: block;
+    font-size: 18px;
+    background: none;
+    border-bottom: 1px solid #0072c6;
+}
+.wrapper {
+    padding: 4px;
+    box-sizing: border-box;
+}
+.jqplot-axis {
+    font-size: 12px;
+}
+.configurate {
+    margin: 30px 0 10px 0;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Программная реализация</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="functions.js"></script>
+<script src="jquery.js"></script>
+<script src="jqplot.js"></script>
+<script src="JXG.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+<div class="main_wrapper">
+<header>Программная реализация интерполяции эмпирических данных сплайном</header>
+<div id="iqplot"></div>
+<form id="form" name="TVI">
+<div class="input_output clearfix">
+<div class="wrapper">
+<div class="title">Ввод: </div>
+<textarea id="input_vars" name="input" wrap="physical" placeholder="Данные вводятся по принципу X X2 X3... [новая строка] Y Y1 Y2 ..."></textarea>
+</div>
+<div class="wrapper">
+<div class="title">Вывод: </div>
+<textarea id="output_vars" name="output" wrap="physical" placeholder="Здесь будут выведены результаты"></textarea>
+</div>
+</div>
+<div class="examples clearfix">
+<div class="title">Показать пример</div>
+<input name="p1" type="button" class="btn" onclick="example1()" value="Пример №1" />
+<input name="p2" type="button" class="btn" onclick="example2()" value="Пример №2"  />
+<input name="p3" type="button" class="btn" onclick="example3()" value="Пример №3"  />
+<input name="p3" type="button" class="btn" onclick="example4()" value="Пример №4"  />
+</div>
+<div class="methods clearfix">
+<div class="title">Метод интерполяции</div>
+<div class="checkbox_wrap">
+<input id="hermite_method" name="Hermite" type="checkbox" value="" onclick="splinetypeHermite();" />
+<label for="hermite_method">Cплайнами Эрмита</label>
+</div>
+<div class="checkbox_wrap">
+<input id="akima_method" name="Akima" type="checkbox" value="" onclick="splinetypeAkima();" />
+<label for="akima_method">Сплайнами Акимы</label>
+</div>
+</div>
+<div class="configurate">
+<div class="step">
+<label for="input_step">Шаг по X</label><input id="input_step" type="text" name="format" value="1"></div>
+<div class="calculate clearfix">
+<input name="calc" type="button" class="btn" onclick="Calc();" value="Посчитать" />
+<input name="reset" type="reset" class="btn" onclick="splinetype = 0; array_reset();" value="Сбросить" />
+<input id="checkSVG" name="graph" type="checkbox" value="" />
+<label for="checkSVG">Использовать SVG</label>
+</div>
+</div>
+</div>
+</form>
+<footer>developed by Sergey Saratov, Tambov 2016</footer>
+</div>
+</body>
+</html>
